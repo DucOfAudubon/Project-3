@@ -18,7 +18,7 @@ public class Player {
      * @return true if its bank has enough, false if its bank is too low
      */
     public boolean stillPlaying(){
-        if(this.bank > 15) {
+        if(this.bank >= 15) {
             return true;
         }
         return false;
@@ -36,7 +36,7 @@ public class Player {
         for(int i = 0; i < numOfBets; i++){ //creates an array of Bet objects
             this.bank -= 15; //adjust the bank for how much the player has bet
             Object guess = aup.cs.Table.RandomBet();
-            Bet[i] = Bet(15, guess);
+            Bet[i] = new Bet(15, guess);
         }
         return allBets;
     }

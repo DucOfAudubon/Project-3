@@ -4,10 +4,10 @@ public class Table {
     /**
      * The table represents all the bets available to the player
      */
-    private Object[] possibleBets = {int 0, int 1, int 2, int 3, int 4, int 5, int 6, int 7, int 8,
-    int 9, int 10, int 11, int 12, int 13, int 14, int 15, int 16, int 17, int 18, int 19, int 20,
-    int 21, int 22, int 23, int 24, int 25, int 26, int 27, int 28, int 29, int 30, int 31, int 32,
-    int 33, int 34, int 35, int 36, String "Even", String "Odd", String "Red", String "Black",
+    private Object[] possibleBets = {Integer 0, Integer 1, Integer 2, Integer 3, Integer 4, Integer 5, Integer 6, Integer 7, Integer 8,
+            Integer 9, Integer 10, Integer 11, Integer 12, Integer 13, Integer 14, Integer 15, Integer 16, Integer 17, Integer 18, Integer 19, Integer 20,
+            Integer 21, Integer 22, Integer 23, Integer 24, Integer 25, Integer 26, Integer 27, Integer 28, Integer 29, Integer 30, Integer 31, Integer 32,
+            Integer 33, Integer 34, Integer 35, Integer 36, String "Even", String "Odd", String "Red", String "Black",
     String "First Third", String "Second Third", String "Third Third", String "First Half", String "Second Half"};
 
     /**
@@ -15,7 +15,7 @@ public class Table {
      * it takes a random element from the array of possibleBets
      * @return one of the bets
      */
-    public Object randomBet(){
+    public Object RandomBet(){
         int rnd = new java.util.Random().nextInt(possibleBets.length);
         return possibleBets[rnd];
     }

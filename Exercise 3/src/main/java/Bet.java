@@ -193,6 +193,6 @@ public class Bet {
     }
 
     public boolean[] getArrayForm() {
-        return arrayForm[];
+        return arrayForm;
     }
 }

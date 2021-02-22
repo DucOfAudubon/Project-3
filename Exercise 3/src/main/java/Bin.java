@@ -33,13 +33,13 @@ public class Bin {
                 this.isEven = true;
                 this.isOdd = false;
                 this.isRed = true;
-                this.isOdd = false;
+                this.isBlack = false;
             }
             if(numResult % 2 == 1){ // If the number is odd
                 this.isEven = false;
                 this.isOdd = true;
                 this.isRed = false;
-                this.isOdd = true;
+                this.isBlack = true;
             }
             if(numResult < 13){ // If the number is from 1-12, it is in the first third
                 this.isFirstThird = true;
@@ -111,6 +111,6 @@ public class Bin {
     }
 
     public boolean[] getArrayForm() {
-        return arrayForm[];
+        return arrayForm;
     }
 }
