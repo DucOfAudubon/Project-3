@@ -16,9 +16,7 @@ public class Game {
         return (bet * 2);
     }
     public void cycle(Player player) {
-        int b = player.placeBets();
+        Bet[] b = player.placeBets(1);
         wheel.spin();
-        //TODO
-        wheel.reset();
     }
 }
