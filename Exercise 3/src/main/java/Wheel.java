@@ -15,7 +15,9 @@ public class Wheel {
         return currentNumber;
     }
 
-
+    /**
+     * This spins the wheel, creating a Bin based on a random integer from 0-36
+     */
     public void spin() {
         // simulates one spin on the wheel
         Random random = new Random();

@@ -1,4 +1,7 @@
 public class Bet {
+    /**
+     * This class will need all the characteristics of the bet that the player places
+     */
     private int betAmount;
     private String betResult;
     private int payout;
@@ -12,7 +15,16 @@ public class Bet {
     private boolean isThirdThird;
     private boolean isFirstHalf;
     private boolean isSecondHalf;
+    // This is just a convenient array form of the above booleans
+    private boolean[] arrayForm = {isEven, isOdd, isBlack, isRed, isFirstThird, isSecondThird, isThirdThird, isFirstHalf, isSecondHalf};
 
+    /**
+     * This is a constructor if the Bet is placed on a specific number result
+     * It adjusts the payout appropriately
+     * It sets all the booleans appropriately based on the number
+     * @param amount this is the amount the player bet
+     * @param betNumber this is the result that the bet is placed on
+     */
     public Bet(int amount, int betNumber){
         this.binNumber = betNumber;
         this.betAmount = amount;
@@ -67,6 +79,14 @@ public class Bet {
         }
     }
 
+    /**
+     * This is a constructor if the Bet is placed on one of the 'categorical' results
+     * It takes that category as a string
+     * It adjusts the payout appropriately, based on the odds of each category
+     * It sets all the booleans appropriately based on the category. Any unaddressed booleans default to false.
+     * @param amount this is the amount the player bet
+     * @param betString this is the category that the bet is placed on
+     */
     public Bet(int amount, String betString){
         this.betAmount = amount;
         this.betResult = betString;
@@ -170,5 +190,9 @@ public class Bet {
 
     public String getBetResult() {
         return betResult;
+    }
+
+    public boolean[] getArrayForm() {
+        return arrayForm[];
     }
 }
